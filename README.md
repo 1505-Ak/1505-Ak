@@ -8,7 +8,7 @@
 - 😄 Pronouns: He/Him
 - ⚡ Fun fact: I once built a music recommendation engine using Formal Concept Analysis just for fun 🎶
 
-🛠️ Check out my latest project: [**Sentiview** – A Sentiment Analysis Tool](https://github.com/1505-Ak/sentiview)
+🛠️ Check out my latest project: [**feelnet** – A Sentiment Analysis Tool](https://github.com/1505-Ak/feelnet)
 
 <!---
 1505-Ak/1505-Ak is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
