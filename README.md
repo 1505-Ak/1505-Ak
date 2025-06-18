@@ -6,8 +6,7 @@
 - 💞️ I’m looking to collaborate on open-source projects related to AI for social good, public opinion mining, or smart dashboards.
 - 📫 How to reach me: anulomekishore15@gmail.com or [LinkedIn](https://www.linkedin.com/in/anulome-kishore-792b00245/)
 - 😄 Pronouns: He/Him
-- ⚡ Fun fact: I once built a music recommendation engine using Formal Concept Analysis just for fun 🎶
-
+- Fun fact: I built a music recommendation engine using Formal Concept Analysis — because why not combine abstract algebra with Spotify vibes?
 🛠️ Check out my latest project: [**feelnet** – A Sentiment Analysis Tool](https://github.com/1505-Ak/feelnet)
 
 <!---
