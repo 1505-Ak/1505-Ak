@@ -1,25 +1,37 @@
-# Mac File Workflow Builder
+# Hi, I'm Anulome Kishore 👋
 
-A small front-end project that turns your Finder pain points into a recommended macOS tooling stack.
+Software Engineer @ J.P. Morgan (Asset & Wealth Management)  
+First-Class BSc (Hons) Computer Science – University of Manchester  
 
-## What it does
+---
 
-- Lets you choose between:
-  - **Replacing Finder** with power-user alternatives.
-  - **Keeping Finder** but adding automation and cleanup utilities.
-- Scores tools based on your preferences for:
-  - keyboard-driven workflow,
-  - automation depth,
-  - cloud/multi-device usage,
-  - lightweight utility bias.
-- Recommends a top-3 setup using projects like Commander One, Marta, Spacedrive, Hazel, TagSpaces, Rectangle, PearCleaner, and Alfred.
+##  What I Do
+- Build distributed data ingestion systems
+- Design cloud-native backend services
+- Work with high-throughput trading & reference data
+- Focus on clean architecture and scalable systems
 
-## Run locally
+**Tech:**  
+Java 21 · Spring Boot · GraphQL · Kafka · AWS · CI/CD  
 
-Because this is a static project, you can open `index.html` directly or run a simple server:
+---
 
-```bash
-python3 -m http.server 8000
-```
+## Academic Focus
+Dissertation: *Knowledge Inference using Formal Concept Analysis*  
+Built a context-aware search engine comparing FCA, Cosine Similarity, CERES and LDA.
 
-Then visit `http://localhost:8000`.
+---
+
+##  Projects
+- **Siply** – Drinks discovery platform (Spring Boot + React)
+- **FeelNet** – Review sentiment analysis engine (Python + Transformers)
+- **FCA4J** – Java Formal Concept Analysis library
+
+---
+
+## Interests
+Distributed systems · Data platforms · System design · Applied AI · Quantitative engineering
+
+---
+
+📫 Always open to building interesting systems.
