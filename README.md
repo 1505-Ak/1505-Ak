@@ -1,14 +1,25 @@
-# 👋 Hi, I’m @1505-Ak
+# Mac File Workflow Builder
 
-- 💼 I’m currently working as a **Software Engineer at JPMorgan Chase & Co.**
-- 👀 I’m passionate about Natural Language Processing, AI/ML, and building data-driven apps like sentiment analysis and recommender systems.
-- 🌱 I’m actively learning deep learning with Transformers (Hugging Face), scalable backend design with FastAPI, and data visualization using D3.js.
-- 💞️ I’m looking to collaborate on open-source projects related to AI for social good, public opinion mining, or smart dashboards.
-- 📫 How to reach me: anulomekishore15@gmail.com | [LinkedIn](https://www.linkedin.com/in/anulome-kishore-792b00245/)
-- 🌐 Check out my personal portfolio: [anulomekishore.netlify.app/portfolio.html](https://anulomekishore.netlify.app/portfolio.html)
-- 🛠️ Take a look at my latest project: [**feelnet – A Sentiment Analysis Tool**](https://github.com/1505-Ak/feelnet)
+A small front-end project that turns your Finder pain points into a recommended macOS tooling stack.
 
----
+## What it does
 
-### Fun fact:  
-When I’m not coding, I’m on a quest to try a McChicken in every country I visit — so far, I’ve had one in 20 countries!
+- Lets you choose between:
+  - **Replacing Finder** with power-user alternatives.
+  - **Keeping Finder** but adding automation and cleanup utilities.
+- Scores tools based on your preferences for:
+  - keyboard-driven workflow,
+  - automation depth,
+  - cloud/multi-device usage,
+  - lightweight utility bias.
+- Recommends a top-3 setup using projects like Commander One, Marta, Spacedrive, Hazel, TagSpaces, Rectangle, PearCleaner, and Alfred.
+
+## Run locally
+
+Because this is a static project, you can open `index.html` directly or run a simple server:
+
+```bash
+python3 -m http.server 8000
+```
+
+Then visit `http://localhost:8000`.
