@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mac File Workflow Builder</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header>
+        <h1>Build Your macOS File Workflow</h1>
+        <p>
+          Choose whether you want to <strong>replace Finder</strong> or
+          <strong>automate your existing folders</strong>, then get a personalized stack.
+        </p>
+      </header>
+
+      <section class="card chooser">
+        <h2>1) Pick your direction</h2>
+        <div class="choices" id="modeChoices"></div>
+      </section>
+
+      <section class="card quiz hidden" id="quizSection">
+        <h2>2) Tell us what matters most</h2>
+        <form id="quizForm">
+          <label>
+            Keyboard-first workflow
+            <input type="range" name="keyboard" min="0" max="10" value="5" />
+          </label>
+          <label>
+            Need automation / rules
+            <input type="range" name="automation" min="0" max="10" value="5" />
+          </label>
+          <label>
+            Multi-device or cloud workflows
+            <input type="range" name="cloud" min="0" max="10" value="5" />
+          </label>
+          <label>
+            Want lightweight utilities only
+            <input type="range" name="lightweight" min="0" max="10" value="5" />
+          </label>
+          <button type="submit">Recommend my setup</button>
+        </form>
+      </section>
+
+      <section class="card hidden" id="results">
+        <h2>Recommended tools</h2>
+        <div id="resultsList"></div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
