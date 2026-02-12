@@ -2,17 +2,15 @@
 
 A practical setup to make Finder feel "organized by default".
 
-This project now includes:
-1. A small recommendation UI (`index.html`) for choosing your strategy.
-2. A real automation script (`organize_finder.py`) to arrange files with sensible rules.
+> You asked for real Finder edits (not just recommendations). This project now includes direct-run scripts that move files from Finder folders immediately.
 
-## What gets organized
+## What actually edits Finder files
 
-By default, the organizer scans:
+These scripts operate on your real folders:
 - `~/Downloads`
 - `~/Desktop`
 
-And moves content to:
+And move items into:
 - `~/Workspace/Code` for code/project files.
 - `~/Workspace/Organized/Documents`
 - `~/Workspace/Organized/Media`
@@ -20,35 +18,41 @@ And moves content to:
 - `~/Workspace/Organized/Apps`
 - `~/Workspace/Organized/Misc`
 
+### One-click from Finder (double-click)
+
+- `run_finder_organizer_dry_run.command` → preview what would move (safe).
+- `run_finder_organizer.command` → performs actual moves.
+
+Both scripts can be double-clicked in Finder.
+
+## Core organizer logic
+
+`organize_finder.py` handles:
+- extension-based sorting,
+- project-folder detection (`.git`, `package.json`, `pyproject.toml`, etc.),
+- collision-safe renaming,
+- undo log for rollback.
+
 ### Code-related logic
-- Source files (`.py`, `.js`, `.ts`, `.swift`, `.java`, `.rs`, etc.) are moved to `~/Workspace/Code`.
-- Folders containing project markers (`.git`, `package.json`, `pyproject.toml`, `Cargo.toml`, etc.) are treated as code projects and moved to `~/Workspace/Code`.
-
-## Run locally (UI)
-
-```bash
-cd mac-file-workflow-builder
-python3 -m http.server 8000
-```
-
-Then open <http://localhost:8000>.
+- Source files (`.py`, `.js`, `.ts`, `.swift`, `.java`, `.rs`, etc.) go to `~/Workspace/Code`.
+- Folders with project markers are treated as code projects and moved to `~/Workspace/Code`.
 
 ## Run organizer manually
 
-Start with a dry run:
+Dry run:
 
 ```bash
 cd mac-file-workflow-builder
 python3 organize_finder.py --dry-run
 ```
 
-Then execute for real:
+Real execution:
 
 ```bash
 python3 organize_finder.py
 ```
 
-Custom folders example:
+Custom sources:
 
 ```bash
 python3 organize_finder.py --sources ~/Downloads ~/Desktop ~/Documents
@@ -56,15 +60,15 @@ python3 organize_finder.py --sources ~/Downloads ~/Desktop ~/Documents
 
 ## Undo support
 
-Every move is recorded in `~/.finder_organizer_undo.jsonl`.
+Moves are logged to `~/.finder_organizer_undo.jsonl`.
 
-Dry-run undo preview:
+Preview undo:
 
 ```bash
 python3 organize_finder.py --undo --dry-run
 ```
 
-Actual undo:
+Apply undo:
 
 ```bash
 python3 organize_finder.py --undo
@@ -72,7 +76,7 @@ python3 organize_finder.py --undo
 
 ## Auto-run with LaunchAgent (macOS)
 
-Install and enable (runs every 30 minutes + at login):
+Install + enable (runs every 30 minutes and at login):
 
 ```bash
 ./install_launch_agent.sh
@@ -84,15 +88,12 @@ Disable:
 launchctl unload ~/Library/LaunchAgents/com.finder.organizer.plist
 ```
 
-## Publish as a new GitHub repository
+## Optional recommendation UI
 
-From inside `mac-file-workflow-builder`:
+You can still use the local UI (`index.html`) for strategy selection, but actual file moving is done by the scripts above.
 
 ```bash
-git init
-git add .
-git commit -m "Initial commit: Finder organizer + workflow UI"
-git branch -M main
-git remote add origin git@github.com:<your-username>/mac-file-workflow-builder.git
-git push -u origin main
+python3 -m http.server 8000
 ```
+
+Then open <http://localhost:8000>.
