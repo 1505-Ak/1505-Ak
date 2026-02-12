@@ -1,0 +1,102 @@
+:root {
+  --bg: #f8fafc;
+  --surface: #ffffff;
+  --text: #0f172a;
+  --muted: #475569;
+  --primary: #4f46e5;
+  --primary-2: #1d4ed8;
+  --border: #dbeafe;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: linear-gradient(180deg, #eef2ff 0%, var(--bg) 35%);
+  color: var(--text);
+}
+
+.app {
+  max-width: 920px;
+  margin: 2rem auto;
+  padding: 0 1rem 2rem;
+}
+
+.hero h1 {
+  margin: 0;
+}
+
+.hero p {
+  margin-top: 0.6rem;
+  color: var(--muted);
+}
+
+.card {
+  background: var(--surface);
+  border-radius: 14px;
+  margin-top: 1rem;
+  padding: 1rem 1.2rem;
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 22px rgba(30, 64, 175, 0.08);
+}
+
+.choices {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 0.8rem;
+}
+
+.mode-btn,
+button[type="submit"] {
+  border: 0;
+  border-radius: 10px;
+  background: var(--primary);
+  color: white;
+  cursor: pointer;
+  padding: 0.85rem;
+  font-weight: 600;
+  width: 100%;
+}
+
+.mode-btn.alt {
+  background: var(--primary-2);
+}
+
+.mode-btn small {
+  display: block;
+  font-weight: 400;
+  margin-top: 0.35rem;
+  opacity: 0.95;
+}
+
+.quiz-form label {
+  display: grid;
+  gap: 0.45rem;
+  margin-bottom: 0.9rem;
+}
+
+input[type="range"] {
+  width: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+.tool {
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  padding: 0.75rem;
+  margin-top: 0.7rem;
+}
+
+.tool h3 {
+  margin: 0 0 0.3rem;
+}
+
+.muted {
+  color: var(--muted);
+}
